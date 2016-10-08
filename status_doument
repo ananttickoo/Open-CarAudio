@@ -1,0 +1,14 @@
+# This file contains on the phase and the goal of the phase.
+
+Current Phase -- PHASE 1 
+
+Trying to have a backup power source within which kicks in once the
+car power is turned of. This would give PI enough time to save all the work 
+and exit in a gracefull manner with out corrupting files.
+
+
+Current Plan of action is use a electronic relay and generate a pulse for 
+GPIO pin to detect.
+Once pin is high , we should know that we pool for 30 sec(default) and see state does 
+not change. If state does not change we initiale gracefull shutdown.
+
