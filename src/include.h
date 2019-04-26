@@ -10,7 +10,5 @@
 #include <pthread.h>
 
 //program related files
-#include "spi.c"
 #include "data.h"
 #include "config.h"
-#include "config.c"

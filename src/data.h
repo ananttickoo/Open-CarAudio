@@ -4,3 +4,5 @@ struct spi_read {
 	int y;
 	int sw;
 };
+
+void readAnalog();
