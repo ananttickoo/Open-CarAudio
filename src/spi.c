@@ -38,10 +38,11 @@ void* readAnalog()
 			unsigned char buffer[3] = { 1 };
 			buffer[1] = (CHAN + channel) << 4;
 			wiringPiSPIDataRW(SPICHAN, buffer, 3);
-			value[channel] = r_value(buffer);
+			//value[channel] = r_value(buffer);
+			value[channel] = (buffer[1] << 8 + buffer[2]);
 		}
 		spi = spi_dec(value);
-		sleep(.1);
+		sleep(SLEEP);
 		//printf("<<==============================>>\n");
 		printf("SW :%d", spi.x);
 		printf("\tX :%d", spi.y);
