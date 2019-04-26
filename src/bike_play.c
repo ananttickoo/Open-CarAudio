@@ -1,6 +1,5 @@
 #include "include.h"
 
-
 int main()
 {
 	pthread_t thread_id;
