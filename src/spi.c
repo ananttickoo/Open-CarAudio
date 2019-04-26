@@ -11,7 +11,7 @@ int r_value(unsigned char buffer[3])
 	return (A + B);
 }
 
-struct spi_read spi_dec(int value[3])
+struct spi_read spi_dec(int value[2])
 {
 	struct spi_read spi;
 	spi.x = value[0];
