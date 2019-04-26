@@ -11,6 +11,15 @@ int r_value(unsigned char buffer[3])
 	return (A + B);
 }
 
+struct spi_read spi_dec(int value[3])
+{
+	struct spi_read spi;
+	spi.x = value[0];
+	spi.y = value[1];
+	spi.sw = value[2];
+	return spi;
+}
+
 void* readAnalog()
 {
 	//setup SPI
@@ -20,6 +29,7 @@ void* readAnalog()
 		//return -1;
 	}
 	int channel, value[2];
+	struct spi_read spi;
 	while (True)
 	{
 		channel = 0;
@@ -30,11 +40,12 @@ void* readAnalog()
 			wiringPiSPIDataRW(SPICHAN, buffer, 3);
 			value[channel] = r_value(buffer);
 		}
+		spi = spi_dec(value);
 		sleep(.1);
 		//printf("<<==============================>>\n");
-		printf("SW :%d", value[0]);
-		printf("\tX :%d", value[1]);
-		printf("\tY :%d\n", value[2]);
+		printf("SW :%d", spi.x);
+		printf("\tX :%d", spi.y);
+		printf("\tY :%d\n", spi.sw);
 
 	}
 	close(myfd);
