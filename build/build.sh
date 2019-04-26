@@ -7,4 +7,4 @@ LIB="-lwiringpi -lpthreads"
 
 cd ../src
 
-gcc bike_play.c -o ../run/bike_play $LIB
+gcc spi.c bike_play.c -o ../run/bike_play $LIB
