@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#create run if does not exit
+mkdir -p ../run/
+
 $LIB ="-lwiringpi -lpthreads"
 
 cd ../src
