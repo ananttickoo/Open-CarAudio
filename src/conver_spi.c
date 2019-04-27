@@ -1,6 +1,8 @@
 #include "data.h"
 #include<stdio.h>
 #include<time.h>
+#include <stdlib.h>
+#include <unistd.h>
 #define True 1
 /*This snippet is suppose to read the values from 
  variables of SPI output . Then convert them into
