@@ -28,9 +28,9 @@ int r_value(unsigned char buffer[3])
 struct spi_read spi_dec(int value[2])
 {
 	struct spi_read spi;
-	spi.x = value[0];
+	spi.x = value[2];
 	spi.y = value[1];
-	spi.sw = value[2];
+	spi.sw = value[0];
 	return spi;
 }
 
