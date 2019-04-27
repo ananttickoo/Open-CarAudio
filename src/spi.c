@@ -51,7 +51,13 @@ void* readAnalog()
 		{
 			unsigned char buffer[3] = { 1 };
 			buffer[1] = (CHAN + channel) << 4;
-			wiringPiSPIDataRW(SPICHAN, buffer, 3);
+			
+			if (wiringPiSPIDataRW(SPICHAN, buffer, 3) == -1)
+			{
+				printf("SPI failure: %s\n", strerror(errno));
+				//spiFail = TRUE;
+				//break;
+			}
 			value[channel] = (int)((buffer[1] << 8) + buffer[2]);
 		}
 		spi = spi_dec(value);
