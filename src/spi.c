@@ -1,4 +1,4 @@
-#include "include.h"
+#include "data.h"
 #define CHAN 8
 #define SPICHAN 0
 #define SPEED 1000000
