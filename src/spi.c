@@ -53,6 +53,7 @@ void* readAnalog()
 			wiringPiSPIDataRW(SPICHAN, buffer, 3);
 			//value[channel] = r_value(buffer);
 			value[channel] = (buffer[1] << 8 + buffer[2]);
+			printf("%d", buffer[1] << 8 + buffer[2]);
 		}
 		spi = spi_dec(value);
 		sleep(SLEEP);
