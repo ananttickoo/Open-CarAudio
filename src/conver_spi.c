@@ -29,7 +29,7 @@ void* read_spi_input()
 			sleep(.3);
 		}
 		printf("%d\t%d\t%d\n", G_spi.sw, G_spi.x, G_spi.y);
-		printf("%d\t%d\t%d\n", sw, x, y);
+		//printf("%d\t%d\t%d\n", sw, x, y);
 
 	}
 }
