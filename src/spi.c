@@ -1,4 +1,15 @@
 #include "data.h"
+#include <wiringPiSPI.h>
+#include <stdio.h>
+#include <wiringPi.h>
+#include <errno.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <string.h>
+#include <errno.h>
+#include <pthread.h>
+
 #define CHAN 8
 #define SPICHAN 0
 #define SPEED 1000000
