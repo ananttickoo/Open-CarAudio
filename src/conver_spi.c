@@ -24,7 +24,7 @@ void* read_spi_input()
 			x = (G_spi.x + x) / 2;
 			y = (G_spi.y + y) / 2;
 			sw = (G_spi.sw + sw) / 2;
-			sleep(.3)
+			sleep(.3);
 		}
 		printf("%d\t%d\t%d\n", G_spi.sw, G_spi.x, G_spi.y);
 		printf("%d\t%d\t%d\n", sw, x, y);
