@@ -1,7 +1,7 @@
 #include "data.h"
 #include<stdio.h>
 #include<time.h>
-#define True 1;
+#define True 1
 /*This snippet is suppose to read the values from 
  variables of SPI output . Then convert them into
  action that should be passed to mpd.
@@ -13,7 +13,7 @@
 
 void* read_spi_input()
 {
-	while True
+	while(True)
 	{
 		int x, y, sw;
 		x = 524;
