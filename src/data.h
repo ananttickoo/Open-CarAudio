@@ -6,3 +6,5 @@ struct spi_read {
 };
 
 void* readAnalog();
+void* read_spi_input();
+struct spi_read G_spi;

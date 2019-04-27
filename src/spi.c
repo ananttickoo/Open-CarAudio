@@ -16,6 +16,7 @@
 #define SPEED 1000000
 
 static int myfd;
+struct spi_read spi;
 
 int r_value(unsigned char buffer[3])
 {
@@ -56,9 +57,10 @@ void* readAnalog()
 		spi = spi_dec(value);
 		sleep(SLEEP);
 		//printf("<<==============================>>\n");
-		printf("SW :%d", spi.x);
-		printf("\tX :%d", spi.y);
-		printf("\tY :%d\n", spi.sw);
+		printf("SW :%d", G_spi.x);
+		printf("\tX :%d", G_spi.y);
+		printf("\tY :%d\n", G_spi.sw);
+		G_spi = spi;
 	}
 	close(myfd);
 }
