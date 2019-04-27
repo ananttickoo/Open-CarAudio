@@ -1,4 +1,5 @@
 #include "data.h"
+#include "config.h" //this will be removed and config.c will give the values dynamically
 #include <wiringPiSPI.h>
 #include <stdio.h>
 #include <wiringPi.h>
