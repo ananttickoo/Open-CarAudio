@@ -29,8 +29,8 @@ struct spi_read spi_dec(int value[2])
 {
 	struct spi_read spi;
 	spi.x = value[2];
-	spi.y = value[0];
-	spi.sw = value[1];
+	spi.y = value[1];
+	spi.sw = value[0];
 	return spi;
 }
 
@@ -63,9 +63,9 @@ void* readAnalog()
 		spi = spi_dec(value);
 		sleep(SLEEP);
 		printf("<<==============================>>\n");
-		printf("SW :%d", G_spi.x);
-		printf("\tX :%d", G_spi.y);
-		printf("\tY :%d\n", G_spi.sw);
+		printf("SW :%d", G_spi.sw);
+		printf("\tX :%d", G_spi.x);
+		printf("\tY :%d\n", G_spi.y);
 		G_spi = spi;
 	}
 	close(myfd);
