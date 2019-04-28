@@ -63,9 +63,9 @@ void* readAnalog()
 		spi = spi_dec(value);
 		sleep(SLEEP);
 		printf("<<==============================>>\n");
-		printf("SW :%d", G_spi.sw);
-		printf("\tX :%d", G_spi.x);
-		printf("\tY :%d\n", G_spi.y);
+		printf("SW :%d", spi.sw);
+		printf("\tX :%d", spi.x);
+		printf("\tY :%d\n", spi.y);
 		G_spi = spi;
 	}
 	close(myfd);
