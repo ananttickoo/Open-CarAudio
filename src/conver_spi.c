@@ -1,6 +1,7 @@
 #include "data.h"
 #include<stdio.h>
 #include<time.h>
+#include <stdlib.h>
 
 #define True 1
 /*This snippet is suppose to read the values from 
