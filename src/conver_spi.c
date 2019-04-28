@@ -1,8 +1,7 @@
 #include "data.h"
 #include<stdio.h>
 #include<time.h>
-#include <stdlib.h>
-#include <unistd.h>
+
 #define True 1
 /*This snippet is suppose to read the values from 
  variables of SPI output . Then convert them into
@@ -28,7 +27,7 @@ void* read_spi_input()
 			sw = (G_spi.sw + sw) / 2;
 			sleep(.3);
 		}
-		printf("%d\t%d\t%d\n", G_spi.sw, G_spi.x, G_spi.y);
+		//printf("%d\t%d\t%d\n", G_spi.sw, G_spi.x, G_spi.y);
 		//printf("%d\t%d\t%d\n", sw, x, y);
 
 	}
