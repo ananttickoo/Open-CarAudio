@@ -29,8 +29,8 @@ struct spi_read spi_dec(int value[2])
 {
 	struct spi_read spi;
 	spi.x = value[2];
-	spi.y = value[1];
-	spi.sw = value[0];
+	spi.y = value[0];
+	spi.sw = value[1];
 	return spi;
 }
 
