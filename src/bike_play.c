@@ -15,6 +15,7 @@ int main()
 {
 	pthread_t thread_id;
 	pthread_create(&thread_id, NULL, readAnalog, NULL);
+	sleep(.2);
 	pthread_create(&thread_id, NULL, read_spi_input, NULL);
 	pthread_join(thread_id, NULL);
 	exit(0);
