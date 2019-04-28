@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<time.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #define True 1
 /*This snippet is suppose to read the values from 
