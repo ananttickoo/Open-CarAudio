@@ -13,7 +13,7 @@
 
 #define CHAN 8
 #define SPICHAN 0
-#define SPEED 1000000
+#define SPEED 100000
 
 static int myfd;
 struct spi_read spi;
