@@ -52,6 +52,7 @@ void* readAnalog()
 		
 		for (channel = 0; channel < 3; channel++)
 		{
+			printf("channel == > %d\n", channel);
 			unsigned char buffer[3] = { 1 };
 			buffer[1] = (CHAN + channel) << 4;
 			if (wiringPiSPIDataRW(SPICHAN, buffer, 3) == -1)
