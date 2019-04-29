@@ -54,7 +54,6 @@ void* readAnalog()
 		{
 			unsigned char buffer[3] = { 1 };
 			buffer[1] = (CHAN + channel) << 4;
-			printf("starting the reaad \n");
 			if (wiringPiSPIDataRW(SPICHAN, buffer, 3) == -1)
 			{
 				printf("SPI failure: %s\n", strerror(errno));
@@ -62,9 +61,7 @@ void* readAnalog()
 				//break;
 			}
 			value[channel] = (int)((buffer[1] << 8) + buffer[2]);
-			printf("read channel %d \n", channel++);
 		}
-		printf("read channel -- > %d \n", channel);
 		spi = spi_dec(value);
 		sleep(SLEEP);
 		printf("<<==============================>>\n");
