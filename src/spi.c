@@ -1,8 +1,7 @@
 #include "data.h"
 #include "config.h" //this will be removed and config.c will give the values dynamically
-#include <wiringPiSPI.h>
+
 #include <stdio.h>
-#include <wiringPi.h>
 #include <errno.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -11,9 +10,12 @@
 #include <errno.h>
 #include <pthread.h>
 
+#include <wiringPi.h>
+#include <wiringPiSPI.h>
+
 #define CHAN 8
 #define SPICHAN 0
-#define SPEED 100000
+#define SPEED 1000000
 
 static int myfd;
 struct spi_read spi;
@@ -37,6 +39,7 @@ struct spi_read spi_dec(int value[2])
 void* readAnalog()
 {
 	//setup SPI
+	wiringPiSetup();
 	if ((myfd = wiringPiSPISetup(SPICHAN, SPEED)) < 0)
 	{
 		printf("unable to open spi\n");
