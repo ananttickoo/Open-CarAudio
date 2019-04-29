@@ -60,6 +60,7 @@ void* readAnalog()
 				//spiFail = TRUE;
 				//break;
 			}
+			printf("channel == > %d", channel);
 			value[channel] = (int)((buffer[1] << 8) + buffer[2]);
 		}
 		spi = spi_dec(value);
