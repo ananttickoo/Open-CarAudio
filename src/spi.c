@@ -52,6 +52,7 @@ void* readAnalog()
 		channel = 0;
 		for (; channel < 3; channel++)
 		{
+			
 			unsigned char buffer[3] = { 1 };
 			buffer[1] = (CHAN + channel) << 4;
 			printf("starting the reaad \n");
@@ -62,7 +63,9 @@ void* readAnalog()
 				//break;
 			}
 			value[channel] = (int)((buffer[1] << 8) + buffer[2]);
+			printf("read channel %d \n", channel);
 		}
+		printf("read channel -- > %d \n", channel);
 		spi = spi_dec(value);
 		sleep(SLEEP);
 		printf("<<==============================>>\n");
