@@ -49,8 +49,8 @@ void* readAnalog()
 	struct spi_read spi;
 	while (True)
 	{
-		
-		for (channel = 0; channel < 3; channel++)
+		channel = 0;
+		for (; channel < 3; channel++)
 		{
 			printf("channel == > %d\n", channel);
 			unsigned char buffer[3] = { 1 };
