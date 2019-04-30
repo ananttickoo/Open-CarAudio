@@ -7,6 +7,8 @@ LIB="-lwiringPi -lpthread"
 LIBPATH="-I/usr/include  -L/usr/local/lib"
 cd ../src
 
-gcc -g3 -lm -w conver_spi.c spi.c bike_play.c -o ../run/bike_play $LIBPATH $LIB
+#gcc -g3 -lm -w conver_spi.c spi.c bike_play.c -o ../run/bike_play $LIBPATH $LIB
 
+gcc -g3 -c bike_play.c -o ../run/bike_play $LIBPATH $LIB
+chmod +x ../run/bike_play
  
